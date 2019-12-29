@@ -1,0 +1,49 @@
+html, body {
+  height: 100%;
+  background-color: #9E9E9E;
+}
+
+#app {
+  height: inherit;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+}
+.title {
+  margin-bottom: 1em;
+  font-size: 28px;
+  color: white;
+  text-shadow: 0 0 1px teal;
+}
+.subtitle {
+  padding: 1em 0 2em 0;
+  color: white
+}
+.notes-section {
+  width: 500px;
+  background-color: teal;
+  padding: 1em;
+}
+
+.columns {
+  width: 100%;
+}
+
+.notes, .timestamps {
+  padding: 5px 0px;
+  color: gold;
+}
+
+strong {
+  color: white;
+}
+.note-count {
+  margin-top: 48px;
+  background-color: #607D8B;
+  padding: 10px;
+  color: white;
+}

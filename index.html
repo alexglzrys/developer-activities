@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Developer Activities</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <h2 class="title">Developer Activities</h2>
+    <div class="notes-section">
+      <div class="columns">
+        <div class="column has-text-centered">
+          <strong>Actividades</strong>
+          <!-- El componente principal tambien consulta al store para renderizar las notas y las marcas de tiempo -->
+          <div v-for="(note, index) in notes" :key="index" class="notes">{{ note }}</div>
+        </div>
+        <div class="column has-text-centered">
+          <strong>Fecha y Hora de Registro</strong>
+          <div v-for="(timestamp, index) in timestamps" :key="index" class="timestamps">{{ timestamp }}</div>
+        </div>
+      </div>
+      
+      <!-- Internamente este componente despacha acciones al store -->
+      <input-component :placeholder="placeholder" />
+    </div>
+    
+    <!-- Internamene este componente consulta el store para mostrar información -->
+    <note-count-component />
+  </div>
+
+  <script src="https://unpkg.com/vue@2.6.10/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+  <script src="./main.js"></script>
+</body>
+</html>
